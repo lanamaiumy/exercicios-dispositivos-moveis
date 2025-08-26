@@ -5,6 +5,8 @@ export default function Login() {
 
   const [username, usernameText] = React.useState('');
   const [password, passwordText] = React.useState('');
+  
+  const login = () => console.log(`Usuário: ${username} | Senha: ${password}`)
 
   return (
     <View>
@@ -28,7 +30,7 @@ export default function Login() {
         <Button
           title = "Clique aqui!"
           color= "#3b9e70ff"
-          onPress = {() => console.log(`Usuário: ${username} | Senha: ${password}`)}
+          onPress = {login}
         />
     </View>
   )
